@@ -1,0 +1,714 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=M+PLUS+1p&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(10 10 10);
+    color: #ffffff;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+  
+a {
+    color: #bfbfbf;
+    text-decoration: none;
+}
+
+.parent {
+  display: flex;
+}
+
+.left {
+  padding: 10px;
+}
+
+.right {
+  padding: 10px;
+}
+
+.Block {
+  display: inline-block;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: 2px solid rgba(60, 60, 60, 0.101);
+  background-color: rgb(11, 11, 11);
+  border-radius: 12px;
+  padding: 10px;
+  padding-left: 15px;
+  margin: 20px 0 0 35px;
+  width: 150px;
+  height: 100px;
+  color: #ffffff; 
+  }
+
+  .Block1 {
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 2px solid rgba(60, 60, 60, 0.101);
+    background-color: rgb(11, 11, 11);
+    border-radius: 12px;
+    padding: 10px;
+    padding-left: 15px;
+    margin: 20px 0 0 10px;
+    width: 150px;
+    height: 100px;
+    color: #ffffff; 
+    }
+
+  .Block2 {
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 2px solid rgba(60, 60, 60, 0.101);
+    background-color: rgb(11, 11, 11);
+    border-radius: 12px;
+    padding: 10px;
+    margin: 20px 0 0 10px;
+    width: 264px;
+    height: 100px;
+    color: #ffffff; 
+  }  
+
+  .text_name {
+    margin-top: 10px;
+    gap: 1rem;
+    padding-top: 10rem;
+    font-size: 12px;
+    color: #bbbbbb;
+    padding: 5px;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .text_name_info {
+    margin-top: 10px;
+    gap: 1rem;
+    padding-top: 10rem;
+    font-size: 15px;
+    color: #bbbbbb;
+    padding: 10px;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  #current_time {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    text-align: left;
+    padding: 5px;
+    font-size: 17px;
+    color: rgb(214, 214, 214);
+  }
+  #current_date {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    text-align: left;
+    padding: 5px;
+    font-size: 1rem;
+    color: rgb(214, 214, 214);
+  }
+
+  #current_weather {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    text-align: left;
+    padding: 5px;
+    font-size: 17px;
+    color: rgb(214, 214, 214);
+  }
+
+  #text_hover {
+    padding: 5px;
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #bbbbbb;
+  }
+
+  #text_date {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    padding: 5px;
+    font-size: 1rem;
+    color: #bbbbbb;
+  }
+
+  #text_utc {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    padding: 5px;
+    font-size: 15px;
+    color: #bbbbbb;
+  }
+
+  #text_deheree {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 5px;
+    color: #bbbbbb;
+  }
+
+  .Block_info {
+    transition: transform 0.5s ease-in-out;
+    display: inline-block;
+    border: 2px solid rgba(60, 60, 60, 0.101);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgb(11 11 11);
+    border-radius: 12px;
+    padding-left: 20px;
+    padding: 10px;
+    margin: 20px 0 0 35px;
+    width: 650px;
+    height: 400px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+
+  .Block_info:hover {
+    transform: scale(1.01); 
+}
+
+  #text_hi {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.avatar_info {
+    padding: 10px 10px 10px;
+    display: flex;
+}
+
+.avatar_info img {
+  margin-left: 10px;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.text_names {
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    display: inline-block;
+    text-shadow: 0 0 150px #ffa008, 0 0 60px #ff8c08;
+    background: linear-gradient(45deg, #f9b11f, #ff561e);
+    background-size: 400% 400%; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fcfcfc;
+    animation: gradientShift 2s infinite;
+    font-size: 25px;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.buttons {
+  font-family: "Poppins", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 13px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.button {
+    border-radius: 30px;
+    background-color: rgb(9, 9, 9);
+    border: 2px solid rgba(73, 73, 73, 0.101);
+    color: #bbb;
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.button2 {
+  border-radius: 30px;
+  background-color: rgb(9, 9, 9);
+  border: 2px solid rgba(73, 73, 73, 0.101);
+  color: #bbb;
+  height: 30px;
+  width: 80px;
+  text-align: center;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+  .loading {
+    display: inline-block;
+    width: 100%;
+    background: linear-gradient(90deg, #131313 25%, #171717 50%, #4a4a4a 75%);
+    background-size: 200% 100%;
+    height: 1.2em;
+    border-radius: 4px;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    from {
+      background-position: 200% 0;
+    }
+    to {
+      background-position: -200% 0;
+    }
+  }
+
+  .icon_info {
+    width: 20px !important;
+    height: 20px !important;
+    object-fit: contain;
+    margin-right: 8px;
+    margin-top: 25px;
+    filter: grayscale(100%);
+  }
+
+  .description_info {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #d5d5d5;
+    font-size: 16px;
+    margin-left: 25px;
+}
+
+.button1 {
+  margin-left: 25px;
+  border-radius: 15px;
+  background-color: rgb(9, 9, 9);
+  border: 2px solid rgba(108, 108, 108, 0.101);
+  color: #bbb;
+  height: 40px;
+  width: 130px;
+  text-align: center;
+  display: flex; 
+  margin-top: 20px;
+  justify-content: center; 
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon_info1 {
+  width: 20px !important;
+  height: 20px !important;
+  object-fit: contain;
+  margin-right: 6px;
+  margin-top: 6px;
+  filter: grayscale(100%);
+}
+
+.buttons1 {
+  font-family: "Poppins", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+    display: flex;
+    font-size: 15px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.block_spotify {
+  transition: transform 0.5s ease-in-out;
+  border: 2px solid rgba(60, 60, 60, 0.101);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgb(11 11 11);
+  border-radius: 12px;
+  padding: 10px;
+  margin: 20px 0 0 35px;
+  width: 650px;
+  height: 175px;
+  color: #ffffff;
+}
+
+.block_spotify:hover {
+  transform: scale(1.01); 
+}
+
+.song_cover {
+
+  width: 90px;
+  height: 90px;
+  border-radius: 15px;
+  float: left;
+  margin-right: 15px;
+  margin-left: 20px;
+}
+
+#trackDetails {
+  overflow: hidden;
+  text-align: left;
+}
+
+#trackName {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 800px;
+  font-style: bold;
+  margin: 5px;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#artistName {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  margin: 5px;
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+#progressContainer {
+  margin: 20px 0 0 20px;
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 600px;
+  height: 8px;
+  position: relative;
+}
+
+#progressBar {
+  background-color: #5f5f5f;
+  height: 100%;
+  width: 0;
+}
+
+#timeInfo {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 13px;
+  margin-top: 12px;
+  color: #b3b3b3;
+}
+
+.Block_projects {
+  display: inline-block;
+  transition: transform 0.5s ease-in-out;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: 2px solid rgba(60, 60, 60, 0.101);
+  background-color: rgb(11, 11, 11);
+  border-radius: 12px;
+  padding: 10px;
+  padding-left: 15px;
+  margin: 20px 0 0 0;
+  width: 640px;
+  height: 250px;
+  color: #ffffff; 
+}
+
+.Block_projects:hover {
+  transform: scale(1.01); 
+}
+
+.Block_projects_info {
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 12px;
+  padding: 10px;
+  padding-left: 15px;
+  margin: 20px 0 0 0;
+  display: inline-block;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: 2px solid rgba(60, 60, 60, 0.101);
+  background-color: rgb(11, 11, 11);
+  color: #ffffff;
+  width: 610px;
+  height: 120px;
+}
+
+
+.text_projects_info {
+  margin-top: 10px;
+  padding-top: 10rem;
+  font-size: 15px;
+  color: #ffffff;
+  padding: 7px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+}
+
+
+.Block_projects_info:hover {
+  transform: scale(0.98);
+}
+
+.description_projects_info {
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #818181;
+  margin-top: 10px;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.Block_skill {
+  transition: transform 0.5s ease-in-out;
+  display: inline-block;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: 2px solid rgba(60, 60, 60, 0.101);
+  background-color: rgb(11, 11, 11);
+  border-radius: 12px;
+  padding: 10px;
+  padding-left: 15px;
+  margin: 20px 0 0 0;
+  width: 640px;
+  height: 470px;
+  color: #ffffff; 
+}
+
+.Block_skill:hover {
+  transform: scale(1.01); 
+}
+
+.text_skill_info {
+  border-radius: 12px;
+  padding: 10px;
+  padding-left: 5px;
+  margin: 20px 0 0 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.Block_skills {
+  display: inline-block;
+  border: 2px solid rgba(60, 60, 60, 0.101);
+  background-color: rgb(11, 11, 11);
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  width: 620px;
+  height: 120px;
+  color: #ffffff; 
+}
+
+.icon_skill_info {
+  width: 30px !important;
+  height: 30px !important;
+  margin-right: 8px;
+  margin-top: 5px;
+  filter: grayscale(100%);
+}
+
+.text_skill {
+  padding-left: 5px;
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  margin: 15px 10px;
+  font-size: 15px;
+  text-align: center;
+  display: flex; 
+  justify-content: left; 
+  align-items: center;
+}
+
+#skill_active {
+  width: 7px;
+  height: 7px;
+  background-color: #3edc26;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  margin: 25px 50px 0 30px;
+  text-align: center;
+  box-shadow: 0 0 10px #3edc26, 0 0 20px #3edc26, 0 0 30px #3edc26, 0 0 40px #3edc26;
+}
+
+.text_skill_avtive {
+  padding-left: 40px;
+  white-space: nowrap;
+  width: 7px;
+  height: 20px;
+  font-family: "Fira Code", monospace;
+  font-weight: 100;
+  font-size: 12px;
+  font-style: normal;
+  color: #3edc26;
+}
+
+
+#skill_processing {
+  width: 7px;
+  height: 7px;
+  background-color: #26dcca;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin: 20px 0 0 30px;
+  text-align: center;
+  box-shadow: 0 0 10px #26dcca, 0 0 20px #26dcca, 0 0 30px #26dcca, 0 0 40px #26dcca;
+}
+
+.text_skill_processing {
+  padding-left: 40px;
+  white-space: nowrap;
+  width: 7px;
+  height: 10px;
+  font-family: "Fira Code", monospace;
+  font-weight: 100;
+  font-size: 10px;
+  font-style: normal;
+  color: #26dcca;
+}
+
+
+@media (max-width: 768px) {
+  .Block,
+  .Block1,
+  .Block2 {
+      display: none;
+  }
+
+  .Block_info {
+    width: 360px;
+    height: 610px;
+    margin: 20px 20px;
+    padding: 15px;
+  }
+
+  .text_name, .text_name_info, #current_time, #current_date, #current_weather, #text_hover, #text_date, #text_utc, #text_deheree {
+    font-size: 12px;
+    padding: 5px;
+  }
+  
+  .avatar_info img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .text_names {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .buttons, .buttons1 {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .button, .button1 {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+  }
+
+  .icon_info, .icon_info1 {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .block_spotify {
+    width: 340px;
+    height: 180px;
+  }
+
+  .song_cover {
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+
+  #trackName {
+    font-size: 16px;
+  }
+
+  #artistName {
+    font-size: 12px;
+  }
+
+  #progressContainer {
+    margin: 15px 10px 0 0;
+    width: 340px;
+  }
+
+  #progressBar {
+    background-color: #8f8f8f;
+    height: 100%;
+    width: 0;
+  }
+
+  #timeInfo {
+    margin: 50px 0 0 0;
+    font-size: 10px;
+  }
+}
